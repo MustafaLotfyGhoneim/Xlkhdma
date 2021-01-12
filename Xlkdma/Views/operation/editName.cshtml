@@ -1,0 +1,53 @@
+﻿@model Xlkdma.Models.EditedData
+@{
+    ViewBag.Title = "تعديل بيانات عميل ";
+
+}
+
+<div style="background-image:url('../Content/Images/popular 2.jpg');background-size:cover; width:1350px;height:1000px;background-position:center center;background-attachment:fixed ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-4">
+
+                <div style="background-color:#333;padding:30px;margin-top:80px;border-radius:10px; opacity:0.8">
+                    <h2 style="color:#fff" class="text-center"> تسجيل دخول كعميل  </h2>
+                    <form class="form-group text-right" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label style="color:#fff">  الاسم بالكامل </label>
+                                <input type="text" name="customerName" class="form-control" placeholder=" ادخل الاسم بالكامل  " />
+                                <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.customerName)</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <label style="color:#fff">محل الاقامة </label>
+                            <input type="text" name="customerCity" class="form-control" placeholder="ادخل محل الاقامة " />
+                            <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.customerCity)</label>
+                        </div>
+                        <div class="col-lg-12">
+                            <label style="color:#fff">الايميل </label>
+                            <input type="email" name="customerEmail" class="form-control" placeholder=" ادخل الابمبل " />
+                            <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.customerEmail)</label>
+                        </div>
+                        <div class="col-lg-12">
+                            <label style="color:#fff"> رقم التليفون  </label>
+                            <input type="text" name="customerPhone" class="form-control" placeholder=" ادخل رقم التليفون    " />
+                            <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.customerPhone)</label>
+                            <br />
+                        </div>
+                        <br />
+                        <input type="submit" name="submit" value="تحديث" class="btn btn-primary btn-block btn-lg" />
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

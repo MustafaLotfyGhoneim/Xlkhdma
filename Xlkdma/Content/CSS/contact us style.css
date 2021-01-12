@@ -1,0 +1,24 @@
+.footer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9%;
+    background-color:white;
+}
+.footer img{
+    margin: 5px;
+}
+.footer-bar{
+    width: 100%;
+    background-color: white;
+    bottom: 60px;
+    position: fixed;
+}
+.last-bar{
+    height: 60px;
+    background-color: #F2F2F2;
+    text-align: center;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}

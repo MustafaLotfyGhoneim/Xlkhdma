@@ -1,0 +1,35 @@
+
+.reg img{
+    align-self: center;
+    margin: 20px;
+}
+
+.reg_row{
+    padding: 100px 70px ;
+    background-color: #f9fafb;
+}
+.reg_row .col{
+    height: 350px;
+    width: 260px;
+    background-color: #f9fafb;
+}
+.reg_row .card-text {
+    margin: revert;
+}
+.reg_row #leftCard{
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+.reg_row #rightCard{
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+
+}
+.reg_row .btn-primary{
+    background-color: #575756;
+}
+.reg_row .btn-primary:hover{
+    background-color: #2f8f84;
+}

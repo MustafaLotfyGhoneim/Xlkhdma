@@ -1,0 +1,52 @@
+﻿@model MVCLoginApp.Models.loginDataCustomer
+@{
+    ViewBag.Title = "دخول عميل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-image:url('../Content/Images/popular 2.jpg');background-size:cover; width:1350px;height:800px;background-position:center center;background-attachment:fixed ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-4">
+
+                <div style="background-color:#333;padding:30px;margin-top:80px;border-radius:10px; opacity:0.8">
+                    <h2 style="color:#fff" class="text-center">  دخول كعميل  </h2>
+                    <form class="form-group text-right" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label style="color:#fff"> الإيميل </label>
+                                <input type="text" name="userName" class="form-control text-right" placeholder="ادخل الإيميل  " />
+                                <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.userName)</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <label style="color:#fff">كلمة المرور   </label>
+                                <input type="password" name="password" class="form-control text-right" placeholder="ادخل كلمة المرور  " /> 
+                                <label style="color:#2f8f84;height:10px;width:140px">@Html.ValidationMessageFor(n => n.password)</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+
+                           
+                            <label style="color:#fff">@Html.CheckBox("remember") تذكّرنى</label>
+                            
+                        </div>
+                        <br />
+                        <input type="submit" name="submit" value="دخول" class="btn btn-primary btn-block btn-lg" />
+                        <label style="color:#2f8f84;height:10px;width:140px">
+                            @if (ViewBag.mess != null)
+                            {@ViewBag.mess;
+                            }
+
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+

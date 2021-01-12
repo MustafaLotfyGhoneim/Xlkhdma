@@ -1,0 +1,61 @@
+﻿@model List<Xlkdma.Models.Job>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Start Slider -->
+<section>
+    <div class="intro-slideshow">
+        <img src="~/Content/Images/popular 1.jpg">
+        <img src="~/Content/Images/popular 2.jpg">
+        <img src="~/Content/Images/popular 3.jpg">
+        <img src="~/Content/Images/popular 4.jpg">
+        <img src="~/Content/Images/popular 5.jpg">
+        <img src="~/Content/Images/popular 6.jpg">
+    </div>
+</section>
+<!-- End Slider -->
+
+
+<div class="container pt-5 pb-5" id="service">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-3 ">
+                <div class="card " style="width: 23rem;">
+
+                    <img src="~/Content/Images/@item.jobImage" class="card-img-top" alt="...">
+                    <div class="card-body text-right">
+                        <h5 class="card-title">@item.jobName</h5>
+                        <p class="card-text">@item.jobDescription</p>
+                        <a href="~/Home/Work/@item.jobId" class="btn btn-primary">لصفحتى</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!--start REG -->
+<!-- صنايعى ولا عميل -->
+<div class="container" id="register">
+    <div class="row align-items-center justify-content-around reg_row ">
+        <div class="card col-sm-12 col-md-6 col-lg-6 text-center reg" id="leftCard" style="width: 18rem;">
+            <div class="card-body">
+                <img src="~/Content/Images/01.png" height="100px" width="100px" />
+                <p class="card-text">إذا كنت ترغب فى التسجيل كعمبل</p>
+                <a href="/register/register" class="btn btn-primary">عميل</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-6 col-lg-6 text-center reg" id="rightCard" style="width: 18rem;">
+            <img src="~/Content/Images/02.png" height="100px" width="100px" />
+            <div class="card-body">
+                <p class="card-text">إذا كنت ترغب فى التسجيل كصنايعى</p>
+                <a href="/register/registerW" class="btn btn-primary">صنايعى</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--end REG -->

@@ -1,0 +1,81 @@
+﻿@model Xlkdma.Models.Worker
+@{
+    ViewBag.Title = "editW";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-image:url('../Content/Images/popular 2.jpg');background-size:cover; width:1350px;height:1000px;background-position:center center;background-attachment:fixed ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-4">
+
+                <div style="background-color:#333;padding:30px;margin-top:80px;border-radius:10px; opacity:0.8">
+                    <h2 style="color:#fff" class="text-center"> تسجيل دخول كصنايعي </h2>
+                    <form class="form-group text-right" method="post" enctype="multipart/form-data">
+                        @Html.HiddenFor(n=>n.workerId)
+                        <div class="row">
+                            @*<div class="col-lg-6">
+                                    <label style="color:#fff">  ID </label>
+                                    <input type="text" name="workerId" class="form-control" placeholder=" ID  " />
+                                    <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.workerId)</label>
+                                </div>*@
+                            <div class="col-lg-6">
+                                <label style="color:#fff">  الاسم بالكامل </label>
+                                <input type="text" name="workerName" class="form-control" placeholder=" ادخل الاسم بالكامل  " />
+                                <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.workerName)</label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label style="color:#fff">الرقم القومي   </label>
+                                <input type="text" name="workerSsn" class="form-control" placeholder="ادخل الرقم القومي  " />
+                                <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.workerSsn)</label>
+                            </div>
+                        </div>
+                        <label style="color:#fff">محل الاقامة </label>
+                        <input type="text" name="workerCity" class="form-control" placeholder="ادخل محل الاقامة " />
+                        <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.workerCity)</label>
+                        <div class="row">
+
+
+                        </div>
+                        <div class="col-lg-12">
+                            <label style="color:#fff"> سعر الساعة </label>
+                            <input type="number" name="jobPrice" class="form-control" placeholder="ادخل سعر الساعة  " />
+                            <label style="color:#2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.jobPrice)</label>
+                            <br />
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label style="color:#fff"> نوع الوظيفة </label>
+                                <br />
+                                <select name="jobId" style="color:#000 ;height:38px;width:140px">
+                                    <option value="0" selected>اختر وظيفة...</option>
+                                    @foreach (var item in (List<Xlkdma.Models.Job>)ViewBag.jbs)
+                                    {
+                                        <option value="@item.jobId">@item.jobName</option>
+                                    }
+                                </select>
+                                <label style="color:#2f8f84;height:10px;width:30px"> @Html.ValidationMessageFor(n => n.jobId) </label>
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12">
+                            <label style="color:#fff"> رقم التليفون </label>
+                            <input type="text" name="workerPhone" class="form-control  " placeholder="ادخل رقم التليفون  " />
+                            <label style="color: #2f8f84;height:10px;width:40px">@Html.ValidationMessageFor(n => n.workerPhone)</label>
+                        </div>
+                        <br />
+                        <input type="submit" name="submit" value="حفظ" class="btn btn-primary btn-block btn-lg" />
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+    </div>
+</div>

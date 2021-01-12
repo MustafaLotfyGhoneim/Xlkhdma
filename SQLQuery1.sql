@@ -1,0 +1,3 @@
+ALTER TABLE wait
+ADD CONSTRAINT df_done
+DEFAULT (0) FOR done;

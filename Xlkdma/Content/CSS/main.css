@@ -1,0 +1,85 @@
+.intro-slideshow {
+    height: 100vh;
+    position: relative;
+}
+.navbar-brand{
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    font-size:2rem;
+}
+/* @media only screen and (min-width: 1200px) {
+    .navbar-brand{padding-right: 11%;}
+} */
+.navbar-light .navbar-brand,.navbar-light .navbar-brand:hover{
+    color: #2f8f84;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 4rem;
+    font-size: 1.27rem;
+    font-weight: bolder;
+}
+.navbar-light .navbar-nav .active > .nav-link{
+    color: #2f8f84;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color:#2f8f84;
+}
+.btn-outline-success {
+    color: #2f8f84;
+    border-color:#2f8f84;
+}
+.btn-outline-success:hover{
+    background-color: #2f8f84;
+}
+.intro-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    z-index:-1;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+  }
+#footer {
+    background-color: rgba(0, 0, 0,0.8);
+    color: rgb(207, 205, 205);
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding-top:8px !important;
+}
+  #footer a,.nav-link{
+    color :  #2f8f84;
+}
+
+
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}

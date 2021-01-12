@@ -1,0 +1,29 @@
+﻿@model List<Xlkdma.Models.Worker>
+@{
+    ViewBag.Title = "عرض الأعمال";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@foreach (var item in Model)
+{
+    <h1>@item.workerName</h1>
+}*@
+<div class="container pb-5" id="service" >
+    <div class="row justify-content-between">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-3">
+                <div class="card " style="width: 25rem;">
+
+                    <img src="~/Content/Images/@item.workerImage" class="card-img-top" alt="..." width="250" height="200">
+                    <div class="card-body text-right">
+                        <h5 class="card-title">@item.workerName</h5>
+                        <p class="card-text">@item.workerCity</p>
+                        <a href="~/Home/details/@item.workerId" class="btn btn-primary">تفاصيل</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+﻿@model Xlkdma.Models.Customer
+@{
+    ViewBag.Title = "الصفحة الشخصية";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>الصفحة الشخصية</title>
+
+
+    <link rel="stylesheet" href="~/Content/XJOvXz/css/reset.css">
+
+
+    <link rel="stylesheet" href="~/Content/XJOvXz/css/style.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="col-sm-12 mt-2 text-center">
+
+        </div><br />
+        <h2>@Model.customerName</h2>
+        <h3>@Model.customerCity</h3><br />
+        <p>@ViewBag.dd</p>
+        <p>+20 @Model.customerPhone</p>
+        <p>@Model.customerEmail  </p>
+        <a class="btn btn-dark mb-2" href="~/home/index#service">اطلب خدمتك</a>
+        <a class="btn btn-dark mb-2" href="/operation/showDoneWithCustomer/@Model.customerId">خدمات تمت الموافقه عليها</a>
+        <a class="btn btn-dark mb-2" href="/operation/showNotDoneYetWithCustomer/@Model.customerId">خدمات لم يتم الموافقه عليها حتى الان</a>
+        <div class="col-sm-12 mt-2 text-center">
+            <a href="~/operation/editName">
+                <i class="fa fa-edit " style="font-size:36px"></i>
+                تعديل البيانات
+            </a><br /><br /><br /><br /><br />
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+﻿@using Xlkdma.Models
+@model List<Done>
+@{
+    ViewBag.Title = "ماتم عمله";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-striped p-2">
+    <tr>
+        <th>الخدمة</th>
+        <th>التفاصيل</th>
+        <th>تاريخ الطلب</th>
+        @*<th>رقم  تليفون العميل</th>
+        <th>إسم العميل</th>*@
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Wait.waitName</td>
+            <td>@item.Wait.waitDesc</td>
+            <td>@item.Wait.waitDate</td>
+            @*<td>@item.Customer.customerPhone</td>
+            <td>@item.Customer.customerName</td>*@
+            <td><a href="/operation/showprofile/@ViewBag.exeid" class="btn btn-info">الصفحة الشخصية</a></td>
+
+
+
+        </tr>
+    }
+</table>

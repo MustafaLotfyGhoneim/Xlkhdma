@@ -1,0 +1,27 @@
+﻿@model List<Xlkdma.Models.Wait>
+
+@{
+    ViewBag.Title = "showNotDoneYetWithCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-striped p-2">
+    <tr>
+        <th>الخدمة</th>
+        <th>التفاصيل</th>
+        <th>تاريخ الطلب</th>
+        <th>مدة التنفيذ</th>
+        <th>إسم الصنايعى</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.waitName</td>
+            <td>@item.waitDesc</td>
+            <td>@item.waitDate</td>
+            <td>@item.waitAchievingTime</td>
+            <td>@item.Worker.workerName</td>
+
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,31 @@
+﻿@model List<Xlkdma.Models.WorkerSkill>
+@{
+    ViewBag.Title = "details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container pb-5" id="service">
+    <div class="row pb-5">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-12 col-md-6 col-lg-6 pb-5">
+                <div class="card " style="width: 25rem;">
+                    <div class="card-body text-right">
+                        <h5 class="card-title">@item.workerSkill1</h5>
+                        <p class="card-text">@item.skillPrice: <label>السعر </label></p>
+                        @if (Session["userId"] != null)
+                        {
+                            <a href="~/Home/order/@item.Worker.workerId" class="btn btn-primary">للطلب</a>
+                        }
+                        else
+                        {
+                            <a href="~/register/register" class="btn btn-primary">سجل ليتم الطلب</a>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

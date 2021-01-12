@@ -1,0 +1,59 @@
+﻿@model Xlkdma.Models.Worker
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.Title = "الصفحة الشخصية";
+
+}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>الصفحة الشخصية</title>
+
+
+    <link rel="stylesheet" href="~/Content/XJOvXz/css/reset.css">
+
+
+    <link rel="stylesheet" href="~/Content/XJOvXz/css/style.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="avatar-flip">
+            <img src="~/attach/@Model.workerImage" height="150" width="150">
+            <img src="~/attach/@Model.workerImage" height="150" width="150">
+        </div>
+        <div class="col-sm-12 mt-2 text-center">
+            <a href="~/operation/WUploadedImage">
+                <i class="fa fa-edit " style="font-size:36px"></i>
+                تعديل الصورة
+            </a><br />
+        </div>
+        <h2>@Model.workerName</h2>
+        <h3>@Model.workerCity</h3><br />
+        <p>@ViewBag.dd</p>
+        <p>+20 @Model.workerPhone</p>
+        <p>@Model.jobPrice أقل سعر للخدمة - بالجنيه المصرى </p>
+        <a class="btn btn-primary mb-2" href="/operation/addkhdma/@Model.workerId">إضافة خدمة</a>
+        <a class="btn btn-primary  mb-2" href="/operation/showorder/@Model.workerId">طلبات جديدة</a>
+        <a class="btn btn-primary  mb-2" href="/operation/executing/@Model.workerId">طلبات قيد التنفيذ</a>
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿@model Xlkdma.Models.Worker
+@{
+    ViewBag.Title = "للإستفسار";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center text-white" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;padding: 10% 0; background-color:#103d46; width: 50%; margin: auto;margin-bottom:1%;margin-top:1%;font-size:40px">
+    <h1 style="padding-bottom:2%">@Model.workerName ( اسم الصنايعى)</h1>
+    <h3>للاستفسار يمكنك الاتصال على الرقم التالى لحين موافقة الصنايعى على الخدمة</h3>
+    <h4 style="padding-bottom:2%">@Model.workerPhone : <label>الهاتف  </label></h4>
+    <h2 style="padding-bottom:2%">@Model.workerCity العنوان</h2>
+    <a href="~/Home/Index" class="btn btn-dark" style="font-size:40px;background-color: whitesmoke;
+        color: #2f8f84;"> للرئيسية</a>
+
+</div>
